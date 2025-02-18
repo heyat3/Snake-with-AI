@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Snake Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="controls">
+            <div class="settings">
+                <div class="setting-group">
+                    <label for="snakeColor">Snake Color:</label>
+                    <input type="color" id="snakeColor" value="#00aa00">
+                </div>
+                
+                <div class="setting-group">
+                    <label for="gameSpeed">Speed:</label>
+                    <input type="range" id="gameSpeed" min="1" max="10" value="5">
+                    <span id="speedValue">5</span>
+                </div>
+                
+                <div class="setting-group">
+                    <label for="hardMode">Hard Mode:</label>
+                    <input type="checkbox" id="hardMode">
+                </div>
+            </div>
+            
+            <div class="score">Score: <span id="scoreValue">0</span></div>
+            <button id="pauseButton" class="game-button">Play</button>
+        </div>
+        
+        <div class="canvas-container">
+            <canvas id="gameCanvas"></canvas>
+            <div id="gameOverScreen" class="game-over-screen">
+                <h2>Game Over!</h2>
+                <p>Final Score: <span id="finalScore">0</span></p>
+                <button id="restartButton">Play Again</button>
+            </div>
+        </div>
+        
+        <div class="mobile-controls">
+            <div class="row">
+                <button id="upButton">⬆️</button>
+            </div>
+            <div class="row">
+                <button id="leftButton">⬅️</button>
+                <button id="rightButton">➡️</button>
+            </div>
+            <div class="row">
+                <button id="downButton">⬇️</button>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
